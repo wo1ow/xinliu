@@ -1,0 +1,19 @@
+<div id="xinliu-announcements">
+<div class="announcement-controls" role="group" aria-label="公告切换">
+<button type="button" id="announcement-prev" disabled>← 上一则</button>
+<strong>最新公告</strong>
+<button type="button" id="announcement-next" disabled>下一则 →</button>
+</div>
+
+<div aria-live="polite" aria-atomic="true">
+{% assign announcements = site.announcements | sort: "date" | reverse %}
+{% for announcement in announcements %}
+<div class="announcement-slide">
+{{ announcement }}
+</div>
+{% endfor %}
+{% if site.announcements.size == 0 %}
+<p>暂无公告。</p>
+{% endif %}
+</div>
+</div>
