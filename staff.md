@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Staff
+title: 教师介绍
 nav_order: 5
 description: A listing of all the course staff members.
 ---
