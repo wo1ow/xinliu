@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 课程时间表
-nav_order: 5
+nav_order: 3
 permalink: /schedule/
 description: 芯流课程每周的上课、小组讨论与答疑安排
 ---
