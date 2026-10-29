@@ -49,3 +49,50 @@ summary {
     }
   }
 }
+
+/* 桌面端课表：日期 | 课程内容 | 配套资料 */
+@media (min-width: 800px) {
+  .main-content .module > dl {
+    grid-template-columns: 130px minmax(0, 1fr);
+  }
+
+  /* 第一列：日期或课次 */
+  .main-content .module > dl > dt {
+    text-align: left;
+  }
+
+  /* 去掉课次后面自动添加的冒号 */
+  .main-content .module > dl > dt::after {
+    content: none;
+  }
+
+  /* 第一条竖线 */
+  .main-content .module > dl > dd {
+    padding: 0;
+    border-left: 1px solid #e5e5eb;
+    min-width: 0;
+  }
+
+  /* 将课程内容和配套资料分成两列 */
+  .main-content .module > dl > dd > dl {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 3fr);
+    align-items: stretch;
+    height: 100%;
+    margin: 0;
+  }
+
+  /* 两列内部留白 */
+  .main-content .module > dl > dd > dl > dt,
+  .main-content .module > dl > dd > dl > dd {
+    margin: 0;
+    padding: 12px 16px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* 第二条竖线 */
+  .main-content .module > dl > dd > dl > dd {
+    border-left: 1px solid #e5e5eb;
+  }
+}
