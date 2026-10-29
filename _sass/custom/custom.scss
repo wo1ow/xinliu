@@ -141,10 +141,11 @@ summary {
   display: none !important;
 }
 
+
 /* 桌面端：缩小侧栏，让正文利用剩余空间 */
 @media screen and (min-width: 50rem) {
   :root {
-    --xinliu-sidebar-width: 220px;
+    --xinliu-sidebar-width: 100px;
   }
 
   .side-bar {
