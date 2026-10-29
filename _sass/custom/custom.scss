@@ -96,3 +96,13 @@ summary {
     border-left: 1px solid #e5e5eb;
   }
 }
+
+@media (min-width: 800px) {
+  /* 课次、课程内容、配套资料 */
+  .main-content .module > dl > dt,
+  .main-content .module > dl > dd > dl > dt,
+  .main-content .module > dl > dd > dl > dd {
+    text-align: left;
+    align-content: center;
+  }
+}
