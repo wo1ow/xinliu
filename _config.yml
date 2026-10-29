@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 芯流·计算机程序解释与构造
+title: 芯流·计算机程序的构造与解释
 tagline: 探索计算之美，体验创造之乐
 description:  芯流学堂的课程、讲义与编程项目
 author: crash
