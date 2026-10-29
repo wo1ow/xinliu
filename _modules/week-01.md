@@ -1,23 +1,19 @@
 ---
-title: Introduction to Java
+title: 第 1 周：开始编程
 ---
 
-Sep 28
-: [Java & Git](#)
-  : [1.1](#)
+第 1 次课
+: **讲授**{: .label .label-blue } 认识计算机与 Python
+  : 环境准备、表达式、调用函数
 
-Sep 29
-: **Section**{: .label .label-purple }[Intro to Java](#)
-  : [Solution](#)
+第 2 次课
+: **讲授**{: .label .label-blue } 定义自己的函数
+  : 参数、返回值与函数调用
 
-Sep 30
-: [Variables & Objects](#)
-  : [1.2](#), [2.1](#)
+课堂实验
+: **实验**{: .label .label-purple } 编写第一个 Python 程序
+  : 尝试定义 square 和 sum_squares
 
-Oct 1
-: **Lab**{: .label .label-purple } [Intro to Java](#)
-
-Oct 2
-: [Tracing, IntLists, & Recursion](#)
-  : [2.1](#)
-: **HW 1 due**{: .label .label-red }
+课后任务
+: **作业**{: .label .label-red } 函数基础练习
+  : 完成练习，并解释程序运行过程
