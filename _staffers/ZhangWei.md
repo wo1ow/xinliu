@@ -3,7 +3,7 @@ name: Zhang Wei
 role: Instructor
 email: kongshan.lali@gmail.com
 website: []
-photo: kevin.jpg
+photo: ZhangWei.jpg
 meta:
   Office Hours: Somewhere on the internet
 ---
