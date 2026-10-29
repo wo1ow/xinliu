@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Calendar
+title: 课程日历
+nav_order: 5
 description: Listing of course modules and topics.
 ---
 
