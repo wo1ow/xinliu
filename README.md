@@ -14,8 +14,7 @@ permalink: /
 通过 Python 编程，学习函数、递归与数据抽象，
 在项目中理解计算机程序如何工作。
 
-## 最新公告
-
+<!-- 最新公告 -->
 {% include announcements.html %}
 <script src="{{ '/assets/js/announcements.js' | relative_url }}" defer></script>
 
