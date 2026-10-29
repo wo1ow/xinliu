@@ -140,3 +140,40 @@ summary {
 #xinliu-announcements .announcement-slide[hidden] {
   display: none !important;
 }
+
+/* 桌面端：缩小侧栏，让正文利用剩余空间 */
+@media screen and (min-width: 50rem) {
+  :root {
+    --xinliu-sidebar-width: 220px;
+  }
+
+  .side-bar {
+    left: 0;
+    width: var(--xinliu-sidebar-width);
+    min-width: var(--xinliu-sidebar-width);
+  }
+
+  .side-bar .site-header,
+  .side-bar .site-nav,
+  .side-bar .site-footer {
+    width: 100%;
+  }
+
+  .side-bar + .main {
+    margin-left: var(--xinliu-sidebar-width);
+    margin-right: 0;
+    max-width: none;
+  }
+
+  /* 长网站标题允许换行，避免挤出顶部区域 */
+  .side-bar .site-header {
+    height: auto;
+    max-height: none;
+  }
+
+  .side-bar .site-title {
+    height: auto;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
