@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 上课与答疑
+title: 课程时间表
 nav_order: 5
 permalink: /schedule/
 description: 芯流课程每周的上课、小组讨论与答疑安排
