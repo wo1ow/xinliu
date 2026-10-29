@@ -106,3 +106,37 @@ summary {
     align-content: center;
   }
 }
+
+
+/* 首页公告切换组件 */
+#xinliu-announcements .announcement-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+#xinliu-announcements .announcement-controls button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+#xinliu-announcements .announcement-controls button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+#xinliu-announcements .announcement-controls button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+#xinliu-announcements .announcement-slide[hidden] {
+  display: none !important;
+}
