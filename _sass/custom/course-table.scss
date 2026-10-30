@@ -1,0 +1,86 @@
+/* 结构化课程表：日期、活动、资料。与旧 .module 样式分开。 */
+.xl-course-table-wrapper {
+  margin: 1rem 0 1.5rem;
+  overflow-x: auto;
+  border: 1px solid #eeebee;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.main-content .xl-course-table {
+  width: 100%;
+  min-width: 680px;
+  margin: 0;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  .xl-course-date-column { width: 12%; }
+  .xl-course-activity-column { width: 55%; }
+  .xl-course-resource-column { width: 33%; }
+
+  th,
+  td {
+    min-width: 0;
+    padding: 14px 16px;
+    border: 0;
+    border-bottom: 1px solid #eeebee;
+    background-color: transparent;
+    font-size: inherit !important;
+    line-height: 1.6;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+  }
+
+  tr > * + * { border-left: 1px solid #eeebee; }
+  tbody tr:last-child > * { border-bottom: 0; }
+
+  .xl-course-date {
+    font-weight: normal;
+
+    span { display: block; }
+  }
+}
+
+.xl-course-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+
+  + .xl-course-item { margin-top: 8px; }
+}
+
+.xl-course-material { font-size: 0.9em; }
+
+.xl-course-label {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 3px 10px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: #fff;
+  background-color: #5c5962;
+  font-size: 0.8em;
+  font-weight: 700;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.xl-course-label-lecture { background-color: #0072c6; }
+.xl-course-label-discussion { background-color: #ffc71a; color: #000; }
+.xl-course-label-lab { background-color: #ffafd2; color: #000; }
+.xl-course-label-homework { border-color: #006666; background-color: transparent; color: #006666; }
+.xl-course-label-reading { background-color: #873cff; }
+.xl-course-label-video { background-color: #ff8528; color: #000; }
+.xl-course-label-project { background-color: #188038; color: #fff; }
+
+@media (max-width: 799px) {
+  .main-content .xl-course-table {
+    th,
+    td { padding: 12px; }
+    .xl-course-date-column { width: 15%; }
+    .xl-course-activity-column { width: 52%; }
+  }
+}
