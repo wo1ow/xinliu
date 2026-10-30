@@ -4,4 +4,7 @@
 {%- if course_prefix == '/' and course_protocol_prefix != '//' -%}
   {%- assign course_href = course_href | relative_url -%}
 {%- endif -%}
+{%- capture course_link -%}
 <a href="{{ course_href | escape }}">{{ include.text | escape }}</a>
+{%- endcapture -%}
+{{- course_link -}}
