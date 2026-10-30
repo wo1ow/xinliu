@@ -1,0 +1,7 @@
+{%- assign course_href = include.url | default: '#' -%}
+{%- assign course_prefix = course_href | slice: 0, 1 -%}
+{%- assign course_protocol_prefix = course_href | slice: 0, 2 -%}
+{%- if course_prefix == '/' and course_protocol_prefix != '//' -%}
+  {%- assign course_href = course_href | relative_url -%}
+{%- endif -%}
+<a href="{{ course_href | escape }}">{{ include.text | escape }}</a>
