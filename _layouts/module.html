@@ -27,7 +27,7 @@
             <span>{{ activity.title | escape }}</span>
             {% endif %}
             {% for material in activity.materials %}
-            <span class="xl-course-material">（{% include course-link.html url=material.url text=material.title %}）</span>
+            <span class="xl-course-material">({% include course-link.html url=material.url text=material.title %})</span>
             {% endfor %}
           </div>
           {% endfor %}
