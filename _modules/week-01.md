@@ -8,7 +8,6 @@ days:
       - type: lecture
         label: 讲授1
         title: 认识计算机与 Python
-        url: "#"
         materials:
           - title: 课件
             url: "#"
