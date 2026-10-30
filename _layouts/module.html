@@ -1,4 +1,61 @@
-<h2 class="fs-4" id="{{ page.title | slugify }}" >{{ page.title }}</h2>
+<h2 class="fs-4" id="{{ page.title | slugify }}">{{ page.title | escape }}</h2>
+{% if page.days %}
+<div class="xl-course-table-wrapper">
+  <table class="xl-course-table">
+    <caption class="sr-only">{{ page.title | escape }}课程安排</caption>
+    <colgroup>
+      <col class="xl-course-date-column">
+      <col class="xl-course-activity-column">
+      <col class="xl-course-resource-column">
+    </colgroup>
+    <tbody>
+      {% for day in page.days %}
+      <tr>
+        <th scope="row" class="xl-course-date">
+          {% if day.weekday %}<span>{{ day.weekday | escape }}</span>{% endif %}
+          {% if day.date %}<span>{{ day.date | escape }}</span>{% endif %}
+        </th>
+        <td>
+          {% for activity in day.activities %}
+          <div class="xl-course-item">
+            {% if activity.label %}
+            <span class="xl-course-label xl-course-label-{{ activity.type | escape }}">{{ activity.label | escape }}</span>
+            {% endif %}
+            {% if activity.url %}
+            {% include course-link.html url=activity.url text=activity.title %}
+            {% else %}
+            <span>{{ activity.title | escape }}</span>
+            {% endif %}
+            {% for material in activity.materials %}
+            <span class="xl-course-material">（{% include course-link.html url=material.url text=material.title %}）</span>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </td>
+        <td>
+          {% for resource in day.resources %}
+          <div class="xl-course-item">
+            {% if resource.label %}
+            <span class="xl-course-label xl-course-label-{{ resource.type | escape }}">{{ resource.label | escape }}</span>
+            {% endif %}
+            {% if resource.text %}<span>{{ resource.text | escape }}</span>{% endif %}
+            {% if resource.links %}
+            <span class="xl-course-resource-links">
+              {% for link in resource.links %}
+              {% include course-link.html url=link.url text=link.title %}{% unless forloop.last %}、{% endunless %}
+              {% endfor %}
+            </span>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
 <div class="module">
   {{ content }}
 </div>
+{% endif %}
